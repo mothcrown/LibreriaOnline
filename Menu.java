@@ -187,6 +187,7 @@ public class Menu {
                 case 6: compra = admin.servicios.getPreciosMembresia("Premium") - (admin.servicios.getPreciosMembresia("Premium") * admin.descuentos.getDescuentoServicios(visita.getCliente().getTipoMiembro()));
                         visita.setGastoServicios(visita.getGastoServicios() + compra);
                         visita.getCliente().setTipoMiembro("Premium");
+                        break;
             }
             System.out.print("\n¡Gracias por su compra!\n");
         }
