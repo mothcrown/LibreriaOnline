@@ -169,16 +169,21 @@ public class Menu {
             switch(op){
                 case 1: compra = admin.servicios.getPreciosServicio("mensual") - (admin.servicios.getPreciosServicio("mensual") * admin.descuentos.getDescuentoServicios(visita.getCliente().getTipoMiembro()));
                         visita.setGastoServicios(visita.getGastoServicios() + compra);
+                        break;
                 case 2: compra = admin.servicios.getPreciosServicio("trimestral") - (admin.servicios.getPreciosServicio("trimestral") * admin.descuentos.getDescuentoServicios(visita.getCliente().getTipoMiembro()));
                         visita.setGastoServicios(visita.getGastoServicios() + compra);
+                        break;
                 case 3: compra = admin.servicios.getPreciosServicio("anual")- (admin.servicios.getPreciosServicio("anual") * admin.descuentos.getDescuentoServicios(visita.getCliente().getTipoMiembro()));
                         visita.setGastoServicios(visita.getGastoServicios() + compra);
+                        break;
                 case 4: compra = admin.servicios.getPreciosMembresia("Plata") - (admin.servicios.getPreciosMembresia("Plata") * admin.descuentos.getDescuentoServicios(visita.getCliente().getTipoMiembro()));
                         visita.setGastoServicios(visita.getGastoServicios() + compra);
                         visita.getCliente().setTipoMiembro("Plata");
+                        break;
                 case 5: compra = admin.servicios.getPreciosMembresia("Oro") - (admin.servicios.getPreciosMembresia("Oro") * admin.descuentos.getDescuentoServicios(visita.getCliente().getTipoMiembro()));
                         visita.setGastoServicios(visita.getGastoServicios() + compra);
                         visita.getCliente().setTipoMiembro("Oro");
+                        break;
                 case 6: compra = admin.servicios.getPreciosMembresia("Premium") - (admin.servicios.getPreciosMembresia("Premium") * admin.descuentos.getDescuentoServicios(visita.getCliente().getTipoMiembro()));
                         visita.setGastoServicios(visita.getGastoServicios() + compra);
                         visita.getCliente().setTipoMiembro("Premium");
@@ -259,5 +264,4 @@ public class Menu {
         }
         return num;
     }
-    
 }
